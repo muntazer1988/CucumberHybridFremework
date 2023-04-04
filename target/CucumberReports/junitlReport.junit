@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="92.353" tests="9" skipped="0" failures="0" errors="0">
+<testcase classname="User creates new account" name="Create account with valid information" time="20.03">
+<system-out><![CDATA[
+Given User navigated to the sign up pape....................................passed
+When User enter first name "Neno"...........................................passed
+And User enter last name "Jan"..............................................passed
+And User enter email "neno@gmail.com".......................................passed
+And User enter password "neno2020"..........................................passed
+Then User clicks on sign up button..........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User creates new account" name="Create account with duplicate information" time="17.863">
+<system-out><![CDATA[
+Given User navigated to the sign up pape....................................passed
+When User enter first name "Neno"...........................................passed
+And User enter last name "Jan"..............................................passed
+And User enter email "neno@gmail.com".......................................passed
+And User enter password "neno2020"..........................................passed
+Then User clicks on sign up button..........................................passed
+Then User shold get a proper message........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User creates new account" name="Create account not providing information" time="14.55">
+<system-out><![CDATA[
+Given User navigated to the sign up pape....................................passed
+When User do not enter first name...........................................passed
+And User do not enter last name.............................................passed
+And User do not enter email.................................................passed
+And User do not enter password..............................................passed
+Then User clicks on sign up button..........................................passed
+Then User shold get a proper message........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login functionality" name="Login with valid credentials - Example #1.1" time="6.497">
+<system-out><![CDATA[
+Given User navigates to login page..........................................passed
+When User enter valid email address omid.muntazeer@gmail.com................passed
+And User enter valid password Imran-2017....................................passed
+And User clicks on login button.............................................passed
+Then User should get successfully login.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login functionality" name="Login with valid credentials - Example #1.2" time="6.49">
+<system-out><![CDATA[
+Given User navigates to login page..........................................passed
+When User enter valid email address omid.muntatter@gmail.com................passed
+And User enter valid password Imran-3017....................................passed
+And User clicks on login button.............................................passed
+Then User should get successfully login.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login functionality" name="Login with invalid credentials" time="6.772">
+<system-out><![CDATA[
+Given User navigates to login page..........................................passed
+When User enter invalid email address "omid.munt545azeer@gmail.com".........passed
+And User enter invalid password "Imran-2002017".............................passed
+And User clicks on login button.............................................passed
+Then User should get a proper message.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login functionality" name="Login with valid email address and invalid password" time="6.624">
+<system-out><![CDATA[
+Given User navigates to login page..........................................passed
+When User enter valid email address "omid.muntazeer@gmail.com"..............passed
+And User enter invalid password "Imran-2002017".............................passed
+And User clicks on login button.............................................passed
+Then User should get a proper message.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login functionality" name="Login with invalid email address and valid password" time="6.62">
+<system-out><![CDATA[
+Given User navigates to login page..........................................passed
+When User enter invalid email address "omid.munt545azeer@gmail.com".........passed
+And User enter valid password "Imran-2017"..................................passed
+And User clicks on login button.............................................passed
+Then User should get a proper message.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login functionality" name="Login without providing any credentials" time="6.7">
+<system-out><![CDATA[
+Given User navigates to login page..........................................passed
+When User do not enter credentials..........................................passed
+And User clicks on login button.............................................passed
+Then User should get a proper message.......................................passed
+]]></system-out>
+</testcase>
+</testsuite>
